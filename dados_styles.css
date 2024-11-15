@@ -1,0 +1,83 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  background-color: #1f1f2e;
+  color: white;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.header-logo{
+  width: 80px;
+  height: auto;
+  border-radius: 10px;
+  position: absolute;
+  left: 20px;
+}
+
+nav {
+  margin: 20px 0;
+  text-align: center;
+}
+nav a {
+  color: white;
+  background-color: #ff6363;
+  padding: 10px 15px;
+  margin: 0 10px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+nav a:hover {
+  background-color: #e05656;
+}
+.content {
+  margin: 20px auto;
+  max-width: 800px;
+}
+.album {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  transition: transform 0.2s;
+}
+.album:hover {
+  transform: scale(1.02);
+}
+.album img {
+  width: 100px;
+  border-radius: 10px;
+  border: 2px solid #ff6363;
+}
+.album-title {
+  font-size: 1.2em;
+  color: #333;
+  cursor: pointer;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+.album-title:hover {
+  text-decoration: underline;
+  color: #ff6363;
+}
+.album-details {
+  display: none;
+  color: #666;
+  margin-top: 10px;
+}
+.album-details.active {
+  display: block;
+}
