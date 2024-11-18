@@ -20,6 +20,8 @@ function adc_carirnho(albumTitle) {
   // Atualizar o sessionStorage com o novo carrinho
   sessionStorage.setItem('carrinho', JSON.stringify(carrinho));
 
+  alert(`Álbum "${albumTitle}" foi adicionado ao carrinho!`);
+
   // Atualizar o total
   let total = carrinho.reduce((sum, item) => sum + item.price, 0);
 
