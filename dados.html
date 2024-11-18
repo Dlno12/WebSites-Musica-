@@ -6,13 +6,22 @@
     <title>Álbuns - Loja Vinyl & Vibes</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link href="dados_styles.css" rel="stylesheet">
-    <script src="dados_script.js" defer></script> <!-- Referência ao script externo -->
+    <script src="dados_script.js" defer></script>
 </head>
 <body>
     <header>
         <img class="header-logo" src="logotipo.jfif">
+
         <h1 id="category-title">Álbuns</h1>
+
+        <div class="carrinho-button">
+            <a href="cart.html">
+                <button>Carrinho</button>
+            </a>
+        </div>
+
     </header>
+
     <nav>
         <a href="index.html">Início</a>
         <a href="dados.html?category=todos">Todos</a>
@@ -20,8 +29,10 @@
         <a href="dados.html?category=pop">Pop</a>
         <a href="dados.html?category=jazz">Jazz</a>
     </nav>
+    
     <div class="content" id="album-list">
         <p>Carregando álbuns...</p>
     </div>
+
 </body>
 </html>

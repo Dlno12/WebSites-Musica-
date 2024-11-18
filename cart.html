@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - Loja Vinyl &amp; Vibes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="cart_styles.css" rel="stylesheet">
+    <script src="cart_script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="logotipo.jfif" alt="Logotipo da Loja Vinyl & Vibes" class="logo">
+        <h1>Loja Vinyl &amp; Vibes</h1>
+    </header>
+    
+    <nav>
+        <a href="dados.html?category=todos">Voltar à Loja</a>
+    </nav>
+
+    <h2>Seu Carrinho:</h2>
+
+    <table id="carrinho-tabela" class="tabela_carrinho">
+        <thead>
+            <tr>
+                <th>Álbum</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Itens do carrinho serão inseridos aqui -->
+        </tbody>
+    </table>
+
+    <div id="total-carrinho">
+        <p><strong>Total: R$ <span id="total-value">0.00</span></strong></p>
+    </div>
+
+    <div class="limpar-carrinho-button">
+        <button id="limpar-carrinho" onclick="limparCarrinho()">Limpar Carrinho</button>
+    </div>
+
+
+    <footer>
+        <div class="content">
+            <p>Bem-vindo à nossa loja! Aqui você encontra os melhores álbuns e acessórios musicais.</p>
+            <p>Explore nosso catálogo</p>
+        </div>
+    </footer>
+
+</body>
+</html>

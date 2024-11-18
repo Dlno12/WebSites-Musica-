@@ -5,7 +5,7 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
-}
+  }
 
   header {
     background-color: #1f1f2e;
@@ -25,54 +25,12 @@ body {
     margin: 0;
   }
 
-
-  header a {
-    color: white;
-    background-color: #d32f2f;
-    padding: 10px 15px;
-    margin:15px 10px;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-    font-size: 1.5em;
-  }
-  header a:hover {
-    background-color: #e05656;
-  }
-
-
   h2 {
     font-size: 1.2em;
     margin: 10px 0 5px;
     color: #ff6363;
   }
-
-.tabela_integrantes {
-    width: 100%; /* A tabela se ajustará ao espaço disponível */
-    max-width: 310px; /* Largura máxima definida */
-    border-collapse: collapse;
-    margin-top: 10px;
-    margin-left: auto; /* Centraliza horizontalmente */
-    margin-right: auto; /* Centraliza horizontalmente */
-}
-
-.tabela_integrantes td {
-    padding: 5px 10px;
-    vertical-align: middle;
-}
-
-.tabela_integrantes td.nome {
-    font-weight: lighter;
-    text-align: left;
-    margin: 5px 0;
-}
-
-.tabela_integrantes td.numero {
-    font-weight: lighter;
-    text-align: left;
-}
-
-
+  
   nav {
     margin: 30px 0;
   }
@@ -88,10 +46,47 @@ body {
   nav a:hover {
     background-color: #e05656;
   }
-  .content {
-    margin: 20px;
-    font-size: 1.1em;
+  
+  .tabela_carrinho {
+      width: 100%; /* A tabela se ajustará ao espaço disponível */
+      max-width: 310px; /* Largura máxima definida */
+      border-collapse: collapse;
+      margin-top: 10px;
+      margin-left: auto; /* Centraliza horizontalmente */
+      margin-right: auto; /* Centraliza horizontalmente */
   }
+
+  .tabela_carrinho td {
+      padding: 5px 10px;
+      vertical-align: middle;
+  }
+
+  .tabela_carrinho td:hover {
+    color: #d32f2f;
+  }
+
+
+  /* Estilo do botão de limpar carrinho */
+  .limpar-carrinho-button {
+    margin: 20px;
+  }
+
+  .limpar-carrinho-button button {
+    color: white;
+    background-color: #d32f2f;
+    padding: 10px 15px;
+    margin: 0px 10px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .limpar-carrinho-button button:hover {
+    background-color: #e05656;
+  }
+    
   footer {
     background-color: #1f1f2e;
     color: #ccc;
@@ -100,3 +95,11 @@ body {
     bottom: 0;
     width: 100%;
   }
+
+  .content {
+    margin: 20px;
+    font-size: 1.1em;
+  }
+
+
+

@@ -4,12 +4,31 @@ function toggleDetails(element) {
 }
 
 
-let total = 0;
+function adc_carirnho(albumTitle) {
+  // Obter o preço do álbum diretamente pelo id do preço
+  const albumPrice = parseFloat(document.getElementById(`preco-${albumTitle}`).textContent.replace('Preço: R$', '').trim());
 
-function adc_carirnho(price){
-  total = total + price;
-  console.log(`O total do carrinho é ${total}`);
+  // Obter o carrinho atual ou criar um novo carrinho vazio
+  let carrinho = JSON.parse(sessionStorage.getItem('carrinho')) || [];
+
+  // Adicionar o álbum ao carrinho
+  carrinho.push({
+    title: albumTitle,
+    price: albumPrice
+  });
+
+  // Atualizar o sessionStorage com o novo carrinho
+  sessionStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+  // Atualizar o total
+  let total = carrinho.reduce((sum, item) => sum + item.price, 0);
+
+  // Imprimir no console o que foi adicionado ao carrinho
+  console.log(`Álbum "${albumTitle}" adicionado ao carrinho com o preço de R$ ${albumPrice.toFixed(2)}`);
+  console.log(`Total do carrinho: R$ ${total.toFixed(2)}`);
 }
+
+
 
 
 function getQueryParameter(name) {
@@ -45,14 +64,14 @@ if (albums.length > 0) {
       <div class="album">
           <img src="${album.cover}" alt="${album.title}">
           <div>
-              <h3 class="album-title" onclick="toggleDetails(this)">${album.title}</h3>
-              <p>Autor: ${album.author}</p>
+              <h3 class="album-title" id="${album.title}" onclick="toggleDetails(this)">${album.title}</h3>
+              <p class="album-author">Autor: ${album.author}</p>
               <div class="album-details">
                   <p><strong>Álbum:</strong> ${album.album}</p>
                   <p><strong>Duração:</strong> ${album.duration}</p>
-                  <p><strong>Preço:</strong> ${album.price}</p>
                   <p><em>${album.review}</em></p>
-                  <button onclick="adc_carirnho(${album.price})">Adicionar ao carrinho</button>
+                  <p class="preco" id="preco-${album.title}"><strong>Preço:</strong> R$ ${album.price}</p>
+                  <button class="adc_carrinho" id="${album.title} "onclick="adc_carirnho('${album.title}')">Adicionar ao carrinho</button>
               </div>
           </div>
       </div>
